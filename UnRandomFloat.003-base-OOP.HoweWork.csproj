@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>UnRandomFloat._003_base_OOP_.HoweWork</RootNamespace>
+    <RootNamespace>UnRandomFloat._003_base_OOP.HoweWork</RootNamespace>
   </PropertyGroup>
 
 </Project>

@@ -3,51 +3,21 @@
 namespace UnRandomFloat._003_base_OOP.HoweWork
 {
     /// <summary>
-    /// Класс для организации главного меню и передачи управления в соотвтетствующий раздел.
+    /// Класс для организации меню практических заданий к соответствующему уроку.
     /// </summary>
-    public class Dispetcher
+    public class Dispetcher : MenuAndChoice
     {
-        Menu MainMenu;
-        bool oneMoreTime = true;
-        ValidChoice validChoice = new ValidChoice();
+        MenuAndChoice[] homeWorks = {
+              new _HomeWork1(),
+              new _HomeWork2(),
+              new _HomeWork3()};
         public Dispetcher(Menu menu)
         {
-            MainMenu = menu;
+            _Menu = menu;
+            items = homeWorks;
         }
-        public void TransferControlToLesson()
+        public Dispetcher(string[] menuRows) : base(menuRows)
         {
-            MainMenu.PrintMenu();         
-            while (oneMoreTime)
-            {
-                
-                switch (validChoice.FromMenu(MainMenu))
-                {
-                    case (0, true):
-                        oneMoreTime = false;
-                       PrepareСonsole();
-                        break;
-                    case (1, false):
-                        Console.WriteLine("Задание выполнено см: https://github.com/UnRandomFloat/003-base-OOP/pull/1");
-                        PrepareСonsole();
-                        break;
-                    case (2, false):
-                        Console.Clear();
-                        HomeWorkTwo HomeWorkTwo = new HomeWorkTwo();
-                        HomeWorkTwo.GetStarted();
-                        PrepareСonsole();
-                        break;
-                    default:
-                        Console.WriteLine("Практическое задание к этому уроку еще не выполнено, повторите выбор.");
-                        break;
-                }
-            }
-        }
-        void PrepareСonsole()
-        {
-            Console.WriteLine("Для продолжения нажмите Enter");
-            Console.ReadLine();
-            Console.Clear();
-            MainMenu.PrintMenu();
         }
     }
 }

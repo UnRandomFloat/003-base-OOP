@@ -7,9 +7,7 @@ namespace UnRandomFloat._003_base_OOP.HoweWork
         static void Main(string[] args)
         {
             Dispetcher mainDispetcher = new Dispetcher(new Menu(8, "Домашняя работа к уроку №"));
-            mainDispetcher.TransferControlToLesson();
-
+            mainDispetcher.PrintMenuAndSelect(true);
         }
-      
     }
 }
