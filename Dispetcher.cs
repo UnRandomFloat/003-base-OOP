@@ -11,7 +11,10 @@ namespace UnRandomFloat._003_base_OOP.HoweWork
               new _HomeWork1(),
               new _HomeWork2(),
               new _HomeWork3(),
-              new _HomeWork4()};
+              new _HomeWork4(),
+              new _HomeWork5()
+        };
+
         public Dispetcher(Menu menu)
         {
             _Menu = menu;
