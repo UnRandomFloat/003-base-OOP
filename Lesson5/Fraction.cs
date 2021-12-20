@@ -113,7 +113,11 @@ namespace UnRandomFloat._003_base_OOP.HoweWork
         public override bool Equals(object obj)
         {
             Fraction f1 = obj as Fraction;
-            return base.Equals(obj);
+            if((float)f1==(float)this)
+             {
+                return true;
+            }
+            return false;
         }
         public override string ToString()
         {
