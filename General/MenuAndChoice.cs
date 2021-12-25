@@ -9,10 +9,10 @@ namespace UnRandomFloat._003_base_OOP.HoweWork
     abstract public class MenuAndChoice
     {
 
-        public Menu _Menu { get; protected set; }
-        public ValidChoice choice = new ValidChoice();
+        protected Menu _Menu { get; set; }
+        protected ValidChoice choice = new ValidChoice();
         protected (int, bool) selected=(0,false);
-        public MenuAndChoice[] items;
+        protected MenuAndChoice[] items;
         public MenuAndChoice()
         {
         }
