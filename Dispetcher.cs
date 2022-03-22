@@ -10,7 +10,8 @@ namespace UnRandomFloat._003_base_OOP.HoweWork
         MenuAndChoice[] homeWorks = {
               new _HomeWork1(),
               new _HomeWork2(),
-              new _HomeWork3()};
+              new _HomeWork3(),
+              new _HomeWork4()};
         public Dispetcher(Menu menu)
         {
             _Menu = menu;

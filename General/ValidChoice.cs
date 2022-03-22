@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,43 +17,6 @@ namespace UnRandomFloat._003_base_OOP.HoweWork
         {
             return MakeChoice(minVal, maxVal, mainMessage, errMassage);
         }
-        public (int, bool) FromList(params int[] list)
-        {
-            Console.Write("Выберите значение из списка:");
-            foreach (int n in list)
-            {
-                Console.Write(" "+n+",");
-            }
-            Console.WriteLine();
-            string _choice = Console.ReadLine();
-            int selected;
-            bool exit = false;
-            bool isThis()
-            {
-                for (int i = 0; i < list.Length; i++)
-                {
-                    if (selected == list[i])
-                    {
-                        return true;
-                    }
-                 
-                }
-                return false;
-            }
-            while (!int.TryParse(_choice, out selected) || !isThis())
-            {
-                if (_choice == "out")
-                {
-                    exit = true;
-                    break;
-
-                }
-                Console.WriteLine("Некорректный выбор, повторите попытку");
-                _choice = Console.ReadLine();
-            }
-            return (selected, exit);
-        }
-     
         (int, bool) MakeChoice(int minVal, int maxVal, string mainMessage, string errMassage)
         {
             Console.WriteLine(mainMessage + $" от {minVal} до {maxVal} или введите out для выхода:");
@@ -65,16 +29,61 @@ namespace UnRandomFloat._003_base_OOP.HoweWork
                 {
                     exit = true;
                     break;
-                 
+
                 }
                 Console.WriteLine(errMassage + $" (от {minVal} до {maxVal})");
                 _choice = Console.ReadLine();
             }
             return (selected, exit);
         }
-   
+        public (int, bool) FromList(params int[] list)
+        {
+            Console.Write("Выберите значение из списка:");
+            foreach (int n in list)
+            {
+                Console.Write(" "+n+",");
+            }
+            Console.WriteLine();
+            string _choice = Console.ReadLine();
+            int selected;
+            bool exit = false;
+            while (!int.TryParse(_choice, out selected) || !list.Contains(selected))
+            {
+                if (_choice == "out")
+                {
+                    exit = true;
+                    break;
 
-   
+                }
+                Console.WriteLine("Некорректный выбор, повторите попытку");
+                _choice = Console.ReadLine();
+            }
+            return (selected, exit);
+        }
+
+        public (int, bool) FromHashtable(Hashtable ht)
+        {
+            string _choice = Console.ReadLine();
+            int selected;
+            bool exit = false;
+            while (!int.TryParse(_choice, out selected) || !ht.Contains(selected))
+            {
+                if (_choice == "out")
+                {
+                    exit = true;
+                    break;
+
+                }
+                Console.WriteLine("Некорректный выбор, повторите попытку");
+                _choice = Console.ReadLine();
+            }
+            return (selected, exit);
+        }
+
+
+
+
+
 
     }
 }
