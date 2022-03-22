@@ -202,5 +202,10 @@ namespace UnRandomFloat._003_base_OOP.HoweWork
                 _denominator /= n;
             }
         }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }

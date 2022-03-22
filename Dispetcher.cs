@@ -13,7 +13,8 @@ namespace UnRandomFloat._003_base_OOP.HoweWork
               new _HomeWork3(),
               new _HomeWork4(),
               new _HomeWork5(),
-              new _HomeWork6()
+              new _HomeWork6(),
+              new _HomeWork7(),
         };
 
         public Dispetcher(Menu menu)
