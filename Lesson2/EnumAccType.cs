@@ -8,10 +8,11 @@ namespace UnRandomFloat._003_base_OOP.HoweWork
 {
     enum AccType : byte
     {
-        Current,
-        Checking,
-        Credit,
-        Deposit,
-        Budget
+        Текущий,
+        Расчетный,
+        Кредитный,
+        Депозит,
+        Бюджетный
     }
+
 }

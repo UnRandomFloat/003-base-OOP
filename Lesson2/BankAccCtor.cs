@@ -16,7 +16,7 @@ namespace UnRandomFloat._003_base_OOP.HoweWork
         public BankAccCtor() : this (0)
         {
         }
-        public BankAccCtor(double balance) : this(balance, AccType.Current)
+        public BankAccCtor(double balance) : this(balance, AccType.Текущий)
         { 
         }
         public BankAccCtor(double balance, AccType accType)
@@ -38,7 +38,7 @@ namespace UnRandomFloat._003_base_OOP.HoweWork
             Console.WriteLine(_balance);
         }
   
-        public void GetType()
+        public void GetTypeAcc()
         {
             Console.WriteLine(_accType);
         }
