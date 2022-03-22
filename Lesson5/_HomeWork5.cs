@@ -32,6 +32,7 @@ namespace UnRandomFloat._003_base_OOP.HoweWork
                 "14. Декрементировать первую дробь(--)",
                 "15. Декрементировать вторую дробь(--)",
                 "16. Сократить дроби по возможности",
+                       "17. Equals",
 
                };
         public _HomeWork5()
@@ -140,6 +141,9 @@ namespace UnRandomFloat._003_base_OOP.HoweWork
                         oneFractions.Reductions();
                         twoFractions.Reductions();
                         resultFraction.Reductions();
+                        break;
+                    case 17:
+                        Console.WriteLine(oneFractions.Equals(twoFractions));
                         break;
                 }
                 PrepareСonsole();               
