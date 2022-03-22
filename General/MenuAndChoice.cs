@@ -26,7 +26,7 @@ namespace UnRandomFloat._003_base_OOP.HoweWork
             _Menu = new Menu(menuRows);
             this.items = items;
         }
-        public void PrintMenu()
+        public virtual void PrintMenu()
         {
             _Menu?.PrintMenu();
         }
